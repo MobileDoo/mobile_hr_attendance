@@ -1,0 +1,584 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mobile_hr_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 17:32+0000\n"
+"PO-Revision-Date: 2026-10-15 17:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "%(employee)s %(action)s %(distance)s m from %(zone)s"
+msgstr "%(employee)s %(action)s cách %(zone)s %(distance)s m"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "%(employee)s checked in or out with a fake location"
+msgstr "%(employee)s chấm công bằng vị trí giả"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "A fake location is not accepted to check in or out."
+msgstr "Không chấp nhận vị trí giả khi chấm công."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "A photo is required to check in or out."
+msgstr "Cần chụp ảnh khi vào/ra ca."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_hr_employee__mobile_geofence_restricted
+msgid "A work area applies to this employee (and they are not marked \"works anywhere\")."
+msgstr "Có khu vực làm việc áp dụng cho nhân viên này (và họ không được đánh dấu \"làm việc ở đâu cũng được\")."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__active
+msgid "Active"
+msgstr "Đang dùng"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.actions.act_window,help:mobile_hr_attendance.mobile_attendance_zone_action
+msgid "Add a work area"
+msgstr "Thêm khu vực làm việc"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "An employee is limited to the areas of their department (or of the departments above it); if their department has none,\n                        to the areas of their work location; otherwise they are not limited. Check in and check out are both checked."
+msgstr "Nhân viên bị giới hạn theo khu vực của phòng ban (hoặc các phòng ban cấp trên); nếu phòng ban không có khu vực thì theo khu vực của địa điểm làm việc; không có thì không bị giới hạn. Cả vào ca và ra ca đều được kiểm tra."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_zone__department_ids
+msgid "Applies to these departments and to the departments below them."
+msgstr "Áp dụng cho các phòng ban này và các phòng ban con."
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Area"
+msgstr "Khu vực"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.res_config_settings_view_form
+msgid "Ask for a front-camera photo at each check in/out (stored as an attachment of the attendance)."
+msgstr "Yêu cầu chụp ảnh bằng camera trước mỗi lần vào/ra ca (lưu thành tệp đính kèm của lượt chấm công)."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_zone__radius
+msgid "At least 30 m: GPS is not more precise."
+msgstr "Tối thiểu 30 m: GPS không chính xác hơn."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_api.py:0
+#: model:ir.model,name:mobile_hr_attendance.model_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__attendance_id
+msgid "Attendance"
+msgstr "Chấm công"
+
+#. module: mobile_hr_attendance
+#: model:ir.model,name:mobile_hr_attendance.model_mobile_attendance_position
+msgid "Attendance Position Check"
+msgstr "Kiểm tra vị trí chấm công"
+
+#. module: mobile_hr_attendance
+#: model:ir.model,name:mobile_hr_attendance.model_mobile_attendance_zone
+msgid "Attendance Work Area"
+msgstr "Khu vực chấm công"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_api.py:0
+msgid "Attendance history"
+msgstr "Lịch sử chấm công"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "Attendance outside the work area"
+msgstr "Chấm công ngoài khu vực làm việc"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.res_config_settings_view_form
+msgid "Attendances"
+msgstr "Chấm công"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__mode__block
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_zone__mode__block
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__res_config_settings__mobile_attendance_geofence_mode__block
+msgid "Block"
+msgstr "Chặn"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__kind__in
+msgid "Check in"
+msgstr "Vào ca"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_api.py:0
+msgid "Check in / out"
+msgstr "Vào ca / ra ca"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__kind__out
+msgid "Check out"
+msgstr "Ra ca"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_api.py:0
+msgid "Check-in card"
+msgstr "Thẻ chấm công"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__checked_at
+msgid "Checked At"
+msgstr "Kiểm tra lúc"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "Checking in from the app is disabled for your company."
+msgstr "Công ty của bạn đã tắt chấm công từ ứng dụng."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_zone__mode__default
+msgid "Company setting"
+msgstr "Theo cài đặt của công ty"
+
+#. module: mobile_hr_attendance
+#: model:ir.model,name:mobile_hr_attendance.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cài đặt cấu hình"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__create_uid
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__create_date
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__create_date
+msgid "Created on"
+msgstr "Tạo lúc"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Date"
+msgstr "Ngày"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__department_ids
+msgid "Departments"
+msgstr "Phòng ban"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_attendance__display_name
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_api__display_name
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__display_name
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_service__display_name
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__display_name
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__distance
+msgid "Distance to the area (m)"
+msgstr "Khoảng cách tới khu vực (m)"
+
+#. module: mobile_hr_attendance
+#: model:ir.model,name:mobile_hr_attendance.model_hr_employee
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__employee_id
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: mobile_hr_attendance
+#: model:ir.actions.act_window,name:mobile_hr_attendance.hr_employee_unrestricted_action
+msgid "Employees not limited to a work area"
+msgstr "Nhân viên không bị giới hạn khu vực"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__mobile_attendance_mock_policy
+msgid "Fake location"
+msgstr "Vị trí giả"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__mock
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Fake position"
+msgstr "Vị trí giả"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__res_config_settings__mobile_attendance_mock_policy__flag
+msgid "Flag it"
+msgstr "Gắn cờ"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__flagged
+msgid "Flagged"
+msgstr "Đã gắn cờ"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__accuracy
+msgid "GPS accuracy (m)"
+msgstr "Độ chính xác GPS (m)"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "Head office"
+msgstr "Văn phòng chính"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_attendance__id
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_employee__id
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_api__id
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__id
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_service__id
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__id
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__res_config_settings__mobile_attendance_mock_policy__ignore
+msgid "Ignore"
+msgstr "Bỏ qua"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__state__inside
+msgid "Inside"
+msgstr "Trong khu vực"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__kind
+msgid "Kind"
+msgstr "Loại"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__write_uid
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật bởi"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__write_date
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lúc"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__latitude
+msgid "Latitude"
+msgstr "Vĩ độ"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.res_config_settings_view_form
+msgid "Limit check in/out from the app to the areas of Attendances > Work areas (an employee no area applies to is not limited). Start with Warn only: the manager is told, nothing is refused. The distance is computed on the server, for check in and check out."
+msgstr "Giới hạn chấm công từ app trong các khu vực ở Chấm công > Khu vực làm việc (nhân viên không có khu vực nào áp dụng thì không bị giới hạn). Nên bắt đầu với \"Chỉ cảnh báo\": quản lý được báo, không từ chối ai. Khoảng cách do máy chủ tính, cho cả vào ca và ra ca."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_employee__mobile_geofence_restricted
+msgid "Limited to a work area"
+msgstr "Bị giới hạn theo khu vực"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__longitude
+msgid "Longitude"
+msgstr "Kinh độ"
+
+#. module: mobile_hr_attendance
+#: model:ir.model,name:mobile_hr_attendance.model_mobile_api
+msgid "Mobile API"
+msgstr "Mobile API"
+
+#. module: mobile_hr_attendance
+#: model:ir.model,name:mobile_hr_attendance.model_mobile_attendance_service
+msgid "Mobile Attendance Service"
+msgstr "Dịch vụ chấm công di động"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_employee__mobile_geofence_exempt
+msgid "Mobile: works anywhere"
+msgstr "Mobile: làm việc ở đâu cũng được"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__mode
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__mode
+msgid "Mode"
+msgstr "Chế độ"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__zone_id
+msgid "Nearest area"
+msgstr "Khu vực gần nhất"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__mode__off
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_zone__mode__off
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__res_config_settings__mobile_attendance_geofence_mode__off
+msgid "Not checked"
+msgstr "Không kiểm tra"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__state__unknown
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Not known"
+msgstr "Không xác định"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_position__state
+msgid "Not known: the phone gave no position, or one too imprecise to tell."
+msgstr "Không xác định: điện thoại không gửi vị trí, hoặc vị trí quá kém để kết luận."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_hr_employee__mobile_geofence_exempt
+msgid "Not limited to a work area when checking in/out from the app (field staff, travelling sales...)."
+msgstr "Không bị giới hạn khu vực khi chấm công từ app (nhân viên lưu động, kinh doanh đi thị trường...)."
+
+#. module: mobile_hr_attendance
+#: model:ir.ui.menu,name:mobile_hr_attendance.menu_mobile_attendance_unrestricted
+msgid "Not limited to an area"
+msgstr "Không bị giới hạn khu vực"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__state__outside
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Outside"
+msgstr "Ngoài khu vực"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "Place"
+msgstr "Địa điểm"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "Please choose a reason to check in or out."
+msgstr "Vui lòng chọn lý do chấm công."
+
+#. module: mobile_hr_attendance
+#: model:ir.actions.act_window,name:mobile_hr_attendance.mobile_attendance_position_action
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_hr_attendance__mobile_position_ids
+#: model:ir.ui.menu,name:mobile_hr_attendance.menu_mobile_attendance_position
+msgid "Position checks"
+msgstr "Kiểm tra vị trí"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__radius
+msgid "Radius (m)"
+msgstr "Bán kính (m)"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__res_config_settings__mobile_attendance_mock_policy__block
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.res_config_settings_view_form
+msgid "Refuse check in/out from the app when the phone does not send its GPS position."
+msgstr "Từ chối vào/ra ca từ ứng dụng khi điện thoại không gửi vị trí GPS."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__mobile_attendance_require_location
+msgid "Require GPS location"
+msgstr "Bắt buộc vị trí GPS"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__mobile_attendance_require_photo
+msgid "Require a selfie"
+msgstr "Bắt buộc chụp ảnh khuôn mặt"
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_position__state
+msgid "State"
+msgstr "Kết quả"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_position__mock
+msgid "The phone says the position comes from a mock location app."
+msgstr "Điện thoại báo vị trí đến từ ứng dụng giả lập vị trí."
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.actions.act_window,help:mobile_hr_attendance.mobile_attendance_zone_action
+msgid "The place (and radius) where employees check in and out from the MobileDoo app. Then switch the check on in Settings."
+msgstr "Nơi (và bán kính) nhân viên được chấm công từ app MobileDoo. Sau đó bật kiểm tra trong Cài đặt."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_zone.py:0
+msgid "The position of the area is not valid."
+msgstr "Vị trí của khu vực không hợp lệ."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_zone.py:0
+msgid "The radius must be at least %s m."
+msgstr "Bán kính tối thiểu là %s m."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "This reason cannot be used now. Please choose another one."
+msgstr "Không dùng được lý do này lúc này. Vui lòng chọn lý do khác."
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_position_view_search
+msgid "To look at"
+msgstr "Cần xem lại"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_api.py:0
+msgid "Today's attendance"
+msgstr "Chấm công hôm nay"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/controllers/main.py:0
+msgid "Unknown"
+msgstr "Không rõ"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_zone__work_location_ids
+msgid "Used for employees whose department has no area."
+msgstr "Dùng cho nhân viên mà phòng ban không có khu vực."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_position__mode__warn
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__mobile_attendance_zone__mode__warn
+#: model:ir.model.fields.selection,name:mobile_hr_attendance.selection__res_config_settings__mobile_attendance_geofence_mode__warn
+msgid "Warn only"
+msgstr "Chỉ cảnh báo"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_zone__mode
+msgid "What happens to a check in/out outside this area. \"Company setting\": Settings > Mobile > Attendances."
+msgstr "Việc gì xảy ra khi chấm công ngoài khu vực này. \"Theo cài đặt của công ty\": Settings > Mobile > Attendances."
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,help:mobile_hr_attendance.field_mobile_attendance_position__mode
+msgid "What was in force."
+msgstr "Chế độ đang áp dụng lúc đó."
+
+#. module: mobile_hr_attendance
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.mobile_attendance_zone_view_form
+msgid "Who"
+msgstr "Ai"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__mobile_attendance_geofence_mode
+msgid "Work area check"
+msgstr "Kiểm tra khu vực làm việc"
+
+#. module: mobile_hr_attendance
+#: model:ir.actions.act_window,name:mobile_hr_attendance.mobile_attendance_zone_action
+#: model:ir.ui.menu,name:mobile_hr_attendance.menu_mobile_attendance_zone
+#: model_terms:ir.ui.view,arch_db:mobile_hr_attendance.res_config_settings_view_form
+msgid "Work areas"
+msgstr "Khu vực làm việc"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_mobile_attendance_zone__work_location_ids
+msgid "Work locations"
+msgstr "Địa điểm làm việc"
+
+#. module: mobile_hr_attendance
+#: model:ir.model.fields,field_description:mobile_hr_attendance.field_res_config_settings__mobile_attendance_geofence_max_accuracy
+msgid "Worst GPS accuracy accepted (m)"
+msgstr "Độ chính xác GPS kém nhất chấp nhận (m)"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "You are %(distance)s m from %(zone)s: you must be within %(radius)s m to check in or out."
+msgstr "Bạn đang cách %(zone)s %(distance)s m: cần trong vòng %(radius)s m để vào ca hoặc ra ca."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "Your location is required to check in or out. Please enable location services."
+msgstr "Cần vị trí của bạn để vào/ra ca. Vui lòng bật dịch vụ định vị."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "Your position is not precise enough (%(accuracy)s m). Go to an open area and try again."
+msgstr "Vị trí của bạn chưa đủ chính xác (%(accuracy)s m). Hãy ra nơi thoáng và thử lại."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "Your user is not linked to an employee."
+msgstr "Tài khoản của bạn chưa được liên kết với nhân viên."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "checked in"
+msgstr "vào ca"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+msgid "checked out"
+msgstr "ra ca"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_dashboard.py:0
+#, python-format
+msgid "Checked in now"
+msgstr "Đang có mặt"

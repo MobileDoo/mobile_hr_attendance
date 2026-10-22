@@ -1,0 +1,6 @@
+id,name,model_id,group_id/id,operation,domain
+access_zone_officer,mobile.attendance.zone officer,mobile.attendance.zone,hr_attendance.group_hr_attendance_officer,r,
+access_zone_manager,mobile.attendance.zone manager,mobile.attendance.zone,hr_attendance.group_hr_attendance_manager,crud,
+access_position_officer,mobile.attendance.position officer,mobile.attendance.position,hr_attendance.group_hr_attendance_officer,r,
+access_position_manager,mobile.attendance.position manager,mobile.attendance.position,hr_attendance.group_hr_attendance_manager,rd,
+access_zone_company,Attendance work areas: allowed companies,mobile.attendance.zone,,crud,"[('company_id', 'in', company_ids)]"
