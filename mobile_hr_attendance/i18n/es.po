@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mobile_hr_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-06 08:32+0000\n"
+"Language: es_ES\n"
+"PO-Revision-Date: 2026-10-06 08:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+#, python-format
+msgid "A photo is required to check in or out."
+msgstr "Se requiere una foto para fichar."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+#, python-format
+msgid "Checking in from the app is disabled for your company."
+msgstr "El fichaje desde la aplicación está desactivado para su empresa."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/controllers/main.py:0
+#: code:addons/mobile_hr_attendance/controllers/main.py:0
+#, python-format
+msgid "Unknown"
+msgstr "Desconocido"
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+#, python-format
+msgid ""
+"Your location is required to check in or out. Please enable location "
+"services."
+msgstr "Se necesita su ubicación para fichar. Active los servicios de ubicación."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+#: code:addons/mobile_hr_attendance/models/mobile_attendance_service.py:0
+#, python-format
+msgid "Your user is not linked to an employee."
+msgstr "Su usuario no está vinculado a ningún empleado."
+
+#. module: mobile_hr_attendance
+#. odoo-python
+#: code:addons/mobile_hr_attendance/models/mobile_dashboard.py:0
+#, python-format
+msgid "Checked in now"
+msgstr "Fichados ahora"

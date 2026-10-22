@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.mobile_hr_attendance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="mobile_connector.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='mobile_connector']" position="inside">
+                <block title="Attendances" name="mobile_attendance_settings">
+                    <setting help="Refuse check in/out from the app when the phone does not send its GPS position.">
+                        <field name="mobile_attendance_require_location"/>
+                    </setting>
+                    <setting help="Ask for a front-camera photo at each check in/out (stored as an attachment of the attendance).">
+                        <field name="mobile_attendance_require_photo"/>
+                    </setting>
+                    <setting string="Work areas"
+                             help="Limit check in/out from the app to the areas of Attendances > Work areas (an employee no area applies to is not limited). Start with Warn only: the manager is told, nothing is refused. The distance is computed on the server, for check in and check out.">
+                        <div class="content-group">
+                            <div class="row mt8">
+                                <label for="mobile_attendance_geofence_mode" class="col-lg-5 o_light_label"/>
+                                <field name="mobile_attendance_geofence_mode"/>
+                            </div>
+                            <div class="row">
+                                <label for="mobile_attendance_geofence_max_accuracy" class="col-lg-5 o_light_label"/>
+                                <field name="mobile_attendance_geofence_max_accuracy"/>
+                            </div>
+                            <div class="row">
+                                <label for="mobile_attendance_mock_policy" class="col-lg-5 o_light_label"/>
+                                <field name="mobile_attendance_mock_policy"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
