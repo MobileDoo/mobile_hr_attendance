@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_zone_officer,mobile.attendance.zone officer,model_mobile_attendance_zone,hr_attendance.group_hr_attendance_officer,1,0,0,0
+access_zone_manager,mobile.attendance.zone manager,model_mobile_attendance_zone,hr_attendance.group_hr_attendance_manager,1,1,1,1
+access_position_officer,mobile.attendance.position officer,model_mobile_attendance_position,hr_attendance.group_hr_attendance_officer,1,0,0,0
+access_position_manager,mobile.attendance.position manager,model_mobile_attendance_position,hr_attendance.group_hr_attendance_manager,1,0,0,1
