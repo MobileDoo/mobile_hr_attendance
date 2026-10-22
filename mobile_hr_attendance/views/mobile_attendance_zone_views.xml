@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mobile_attendance_zone_view_list" model="ir.ui.view">
+        <field name="name">mobile.attendance.zone.list</field>
+        <field name="model">mobile.attendance.zone</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="radius"/>
+                <field name="mode"/>
+                <field name="department_ids" widget="many2many_tags"/>
+                <field name="work_location_ids" widget="many2many_tags"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="mobile_attendance_zone_view_form" model="ir.ui.view">
+        <field name="name">mobile.attendance.zone.form</field>
+        <field name="model">mobile.attendance.zone</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title"><h1><field name="name" placeholder="Head office"/></h1></div>
+                    <group>
+                        <group string="Place">
+                            <label for="latitude"/>
+                            <div class="o_row">
+                                <field name="latitude"/>
+                                <field name="longitude"/>
+                                <button name="action_open_map" type="object" icon="fa-map-marker" string="OpenStreetMap" class="btn-link"/>
+                            </div>
+                            <field name="radius"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Who">
+                            <field name="department_ids" widget="many2many_tags"/>
+                            <field name="work_location_ids" widget="many2many_tags"/>
+                            <field name="mode"/>
+                        </group>
+                    </group>
+                    <p class="text-muted">
+                        An employee is limited to the areas of their department (or of the departments above it); if their department has none,
+                        to the areas of their work location; otherwise they are not limited. Check in and check out are both checked.
+                    </p>
+                    <field name="note" placeholder="Notes"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobile_attendance_zone_action" model="ir.actions.act_window">
+        <field name="name">Work areas</field>
+        <field name="res_model">mobile.attendance.zone</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Add a work area</p>
+            <p>The place (and radius) where employees check in and out from the MobileDoo app. Then switch the check on in Settings.</p>
+        </field>
+    </record>
+
+    <record id="mobile_attendance_position_view_list" model="ir.ui.view">
+        <field name="name">mobile.attendance.position.list</field>
+        <field name="model">mobile.attendance.position</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" decoration-danger="state == 'outside'" decoration-warning="state == 'unknown' or mock">
+                <field name="checked_at"/>
+                <field name="employee_id"/>
+                <field name="kind"/>
+                <field name="state" widget="badge"/>
+                <field name="zone_id"/>
+                <field name="distance"/>
+                <field name="accuracy"/>
+                <field name="mock"/>
+                <field name="mode" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="mobile_attendance_position_view_search" model="ir.ui.view">
+        <field name="name">mobile.attendance.position.search</field>
+        <field name="model">mobile.attendance.position</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id"/>
+                <field name="zone_id"/>
+                <filter name="flagged" string="To look at" domain="[('flagged', '=', True)]"/>
+                <filter name="outside" string="Outside" domain="[('state', '=', 'outside')]"/>
+                <filter name="unknown" string="Not known" domain="[('state', '=', 'unknown')]"/>
+                <filter name="mock" string="Fake position" domain="[('mock', '=', True)]"/>
+                <separator/>
+                <filter name="date" string="Date" date="checked_at"/>
+                <group>
+                    <filter name="by_employee" string="Employee" context="{'group_by': 'employee_id'}"/>
+                    <filter name="by_zone" string="Area" context="{'group_by': 'zone_id'}"/>
+                    <filter name="by_state" string="Result" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="mobile_attendance_position_action" model="ir.actions.act_window">
+        <field name="name">Position checks</field>
+        <field name="res_model">mobile.attendance.position</field>
+        <field name="view_mode">list</field>
+        <field name="context">{'search_default_flagged': 1}</field>
+    </record>
+
+    <!-- Employees no area applies to: not limited. -->
+    <record id="hr_employee_unrestricted_action" model="ir.actions.act_window">
+        <field name="name">Employees not limited to a work area</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('mobile_geofence_restricted', '=', False)]</field>
+    </record>
+
+    <record id="hr_employee_view_form_mobile_geofence" model="ir.ui.view">
+        <field name="name">hr.employee.form.mobile.geofence</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='work_location_id']" position="after">
+                <field name="mobile_geofence_exempt" groups="hr.group_hr_user"/>
+                <field name="mobile_geofence_restricted" groups="hr.group_hr_user" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="menu_mobile_attendance_zone" name="Work areas" parent="hr_attendance.menu_hr_attendance_root"
+              action="mobile_attendance_zone_action" sequence="90" groups="hr_attendance.group_hr_attendance_manager"/>
+    <menuitem id="menu_mobile_attendance_position" name="Position checks" parent="hr_attendance.menu_hr_attendance_root"
+              action="mobile_attendance_position_action" sequence="91" groups="hr_attendance.group_hr_attendance_officer"/>
+    <menuitem id="menu_mobile_attendance_unrestricted" name="Not limited to an area" parent="hr_attendance.menu_hr_attendance_root"
+              action="hr_employee_unrestricted_action" sequence="92" groups="hr_attendance.group_hr_attendance_manager"/>
+</odoo>

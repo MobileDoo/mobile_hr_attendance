@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_zone_company" model="ir.rule">
+        <field name="name">Attendance work areas: allowed companies</field>
+        <field name="model_id" ref="model_mobile_attendance_zone"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>
